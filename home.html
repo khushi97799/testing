@@ -20,9 +20,9 @@
         margin:0;
         padding:0;
       }
-      @media(min-width:768px){
+      @media(max-width:768px){
        }
-      @media(min-width:640px){
+      @media(max-width:640px){
       }
       /* tab1 */
       .tab1-home{
@@ -75,8 +75,7 @@
         grid-template-columns: repeat(4,1fr);
         gap:4%;
         position:absolute;
-        padding-left:11%;
-        padding-right:15%;
+        padding-left:5%;
         transform: translateY(-50%);
       }
        .hostel-info{
@@ -105,14 +104,16 @@
 
       /*  tab2  */
       .tab2-home{
-        min-height:100vh;
+        min-height:50vh;
         position:relative;
         margin-top:22%;
+        overflow:hidden;
       }
       .container-facilities-title{
         position:absolute;
         left:0;
         right:0;
+        z-index:2;
       }
       .facilities-title{
        font-family:andrew elegant;
@@ -123,12 +124,14 @@
       }
        .facilities-grid{
         display:grid;
-        grid-template-columns:repeat(5,17vw);
-        gap:2.25%;
+        grid-template-columns:repeat(5,18vw);
+        gap:3%;
         position:relative;
-        transform: translateY(30%);
+        margin-left:-3%;
+        transform: translateY(45%);
         width:100%;
         max-width:100vw;
+        margin-bottom:20%;
        }
       .music_button,
       .library_button,
@@ -187,11 +190,10 @@
         margin-top:20px;
       }
       .facilities-button{
-        position:relative;
         display:flex;
         align-items: center;
         justify-content: center;
-        margin-top: 17%;
+        position:relative;
       }
       .view-facilities{
         font-family:Tahoma;
@@ -200,23 +202,22 @@
         font-size:clamp(14px,3vw,36px);
         padding-top:clamp(13px,2vw,23px);
         padding-bottom:clamp(13px,2vw,23px);
-        padding-left:clamp(32px,3vw,69px);
-        padding-right:clamp(32px,3vw,300px);
+        padding-left:4vw;
+        padding-right:12.5vw;
         border:none;
         border-radius:50px;
         cursor:pointer;
         line-height:100%;
-        box-shadow:20px 20px 20px rgba(0,0,0,0.15);
+        box-shadow:3px 3px 3px rgba(0,0,0,0.45);
         transform: all 0.25s;
       }
        .view-facilities:hover{
-        box-shadow: 25px 25px 25px rgba(0,0,0,0.15);
+        box-shadow: 4px 4px 3px rgba(0,0,0,0.55);
         }
       .container-arrow{
         position: absolute;
-         left:66%;
-         right:29%;
-         display:flex;
+        top:0.5vw;;
+        left:62.5vw;
       }
       .arrow{
          background-color:#5A684E;
@@ -239,9 +240,182 @@
 
       /* tab3-home */
       .tab3-home{
-        min-height:100vh;
+        min-height:50vh;
         position:relative;
-        margin-top:22%;
+        margin-top:15%;
+      }
+      .container-notice-title{
+        position:absolute;
+        left:0;
+        right:0;
+        z-index:2;
+      }
+      .notice-title{
+       font-family:andrew elegant;
+       font-size:clamp(22px,4vw,55px);
+       color:#5a684e;
+       text-align:center;
+       display:block;
+      }
+      .notice{
+        position:relative;
+        transform: translateY(20vh);
+        margin-left:4%;
+        margin-right:4%;
+        border-radius:10px;
+        padding:20px;
+        aspect-ratio: 8/3;
+        background-color:white;
+        box-shadow:3px 3px 5px rgba(0,0,0,0.40);
+      }
+
+
+      /* tab4-home */
+      .tab4-home{
+        min-height:50vh;
+        position:relative;
+        margin-top:20%;
+      }
+      .container-maintenance-title{
+        position:absolute;
+        left:0;
+        right:0;
+        z-index:2;
+        margin-bottom:10%;
+      }
+      .maintenance-title{
+       font-family:andrew elegant;
+       font-size:clamp(22px,4vw,55px);
+       color:#5a684e;
+       text-align:center;
+       display:block;
+      }
+      .maintenance-bg{
+        background-color:#5a684e;
+        aspect-ratio: 11/3;
+        display:block;
+        transform: translateY(75%);
+      }
+      .maintenance-grid{
+        display:grid;
+        grid-template-columns: repeat(3,20vw);
+        gap:6%;
+        position:relative;
+        padding-left:15%;
+      }
+      .unsolved-issues,
+      .resolved-issues,
+      .in-progress{
+        background-color:white;
+        border:none;
+        border-radius:10px;
+        aspect-ratio: 3/4;
+      }
+      .unsolved-issues-p,
+      .resolved-issues-p,
+      .in-progress-p{
+        width:20vw;
+        aspect-ratio:17/1;;
+        display:flex;
+        align-items:center;
+        position:absolute;
+        vertical-align:top;
+        text-align:center;
+        border:none;
+        top:0;
+        background-color:#B39A78;
+        border-radius:10px;
+        padding-top:clamp(10px,2vw,30px);
+        padding-bottom:clamp(10px,2vw,30px);
+        color:white;
+        font-family:Tahoma;
+        font-weight:700;
+        font-size:clamp(8px,1.5vw,24px);
+        margin:0;
+      }
+      .unsolved-issues-img,
+      .resolved-issues-img,
+      .in-progress-img{
+        background-color:#B39A78;
+        display:inline-block;
+        border:none;
+        width:3vw;
+        vertical-align:top;
+        object-fit:cover;
+        z-index:2000;
+        margin-right:2vw;
+        margin-left:2vw;
+      }
+      .link-to-complaints{
+        color:black;;
+        display:block;
+        text-align:center;
+        font-family:Tahoma;
+        font-size:clamp(10px,1.5vw,20px);
+        text-decoration:none;
+      }
+       .updates-button{
+        margin-top:10%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        position:relative;
+      }
+      .view-updates{
+        font-family:Tahoma;
+        background-color:#B39A78;
+        color:white;
+        font-size:clamp(14px,3vw,36px);
+        padding-top:clamp(13px,2vw,23px);
+        padding-bottom:clamp(13px,2vw,23px);
+        padding-left:4vw;
+        padding-right:12.5vw;
+        border:none;
+        border-radius:50px;
+        cursor:pointer;
+        line-height:100%;
+        box-shadow:3px 3px 3px rgba(0,0,0,0.45);
+        transform: all 0.25s;
+      }
+       .view-updates:hover{
+        box-shadow: 4px 4px 3px rgba(0,0,0,0.55);
+        }
+
+
+
+
+        /* tab5-home */
+      .tab5-home{
+        min-height:50vh;
+        position:relative;
+        margin-top:20%;
+      }
+      .container-quick-title{
+        position:absolute;
+        left:0;
+        right:0;
+        z-index:2;
+        margin-bottom:10%;
+      }
+      .quick-title{
+       font-family:andrew elegant;
+       font-size:clamp(22px,4vw,55px);
+       color:#5a684e;
+       text-align:center;
+       display:block;
+      }
+      .quick-bg{
+        background-color:#5a684e;
+        aspect-ratio: 11/3;
+        display:block;
+        transform: translateY(75%);
+      }
+      .quick-grid{
+        display:grid;
+        grid-template-columns: repeat(3,20vw);
+        gap:6%;
+        position:relative;
+        padding-left:15%;
       }
     </style>
   </head>
@@ -308,7 +482,7 @@
       <button class="view-facilities">
         VIEW ALL FACILITIES
       </button>
-        <div class="container-arrow"> <button class="arrow" >
+      <div class="container-arrow"> <button class="arrow" >
           <img class="arrow_img" src="icons/arrow.png">
         </button>
       </div>
@@ -316,7 +490,72 @@
    </div>
 
    <div class="tab3-home">
-
+    <div class="container-notice-title"> <p class="notice-title">
+        NOTICE BOARD & ANNOUNCEMENTS
+      </p>
+    </div>
+     <div>
+      <p class="notice">
+      
+      </p>
+    </div>
+   </div>
+   <div class="tab4-home">
+    <div class="container-maintenance-title"> <p class="maintenance-title">
+        MAINTENANCE UPDATE BOARD
+      </p>
+    </div>
+    <div>
+      <p class="maintenance-bg">
+      
+      </p>
+      <div class="maintenance-grid">
+        <button class="unsolved-issues">
+          
+          <p class="unsolved-issues-p"><img class="unsolved-issues-img" src="icons/unsolved.png">UNSOLVED ISSUES</p>
+          <a class="link-to-complaints">
+            Tap to view
+          </a>
+        </button>
+        <button class="resolved-issues">
+            
+          <p class="resolved-issues-p"><img class="resolved-issues-img" src="icons/solved.png">  RESOLVED ISSUES</p>
+          <a class="link-to-complaints">
+            Tap to view
+          </a>
+        </button>
+        <button class="in-progress">
+          
+          <p class="in-progress-p"><img class="in-progress-img" src="icons/progress.png"> IN PROGRESS </p>   
+          <a class="link-to-complaints">
+            Tap to view
+          </a>
+        </button>
+      </div>
+         <div class="updates-button">
+      <button class="view-updates">
+        VIEW ALL UPDATES
+      </button>
+      <div class="container-arrow"> <button class="arrow" >
+          <img class="arrow_img" src="icons/arrow.png">
+        </button>
+      </div>
+    </div>
+    </div>
+   </div>
+      <div class="tab5-home">
+    <div class="container-quick-title"> <p class="quick-title">
+        QUICK ACCESS
+      </p>
+    </div>
+    <div>
+      <p class="quick-bg">
+      
+      </p>
+      <div class="quick-grid">
+       
+    </div>
+    </div>
    </div>
    <script>
     var slideIndex = 0;
