@@ -1,32 +1,97 @@
+.header{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    background-color:#F5F1E8;
+    z-index:2;
+    aspect-ratio: 93/5;
+    width:100%;
+    overflow: clip;
+}
 .left-section{
   display: flex;
   align-items: center;
-  width:20vw;
-  height:50px;
-  padding-left: 25px;
+  justify-content: center;
+  min-width:18vw;
+  padding-left: 1.5vw;
+  margin-right: 4vw;
+}
+.middle-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink:1;
+  min-width: 0;
+  
+}
+.right-section{
+   background-color:#F5F1E8;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  min-width:8vw
 }
 .iitg-h-logo{
-  width:35px;
+  width:4vw;
   object-fit: cover;
-  margin-right:9px;
+  margin-right:1vw;
+
 }
 .disang-h-logo{
-  width:40px;
+  width:4vw;
   object-fit: cover;
-  margin-right:9px;
+  margin-right:1vw;
 }
 .iitg-h-logo-img{
-  width:35px;
-  border-radius: 20px;
+  width:4vw;
   object-fit: cover;
+  border-radius: 4vw;
 }
 .disang-h-logo-img{
-  width:40px;
-  border-radius: 20px;
+  width:4.5vw;
   object-fit: cover;
 }
 .title1{
-  font-size:20px;
+  font-size:clamp(10px,2vw,20px);
   font-family: Inter;
   font-weight: 700;
+}
+.side-bar-button{
+ aspect-ratio: 2/2;
+ width:2.3vw;
+ border:none;
+ align-items: center;
+ display: flex;
+}
+.side-bar-icon{
+  width:2.3vw;
+}
+.home{
+  font-family: Inter;
+  font-size: clamp(10px,2vw,16px);
+  color:#5A684E;
+  border:none;
+  max-width: 100%;
+  height:100%;
+  padding-left:2vw;
+  padding-right: 2vw;
+  border-radius: 3px;
+}
+.home:hover{
+  background-color: #5A684E;
+  color:#F5F1E8;
+}
+.home:active{
+  background-color: #5A684E;
+  color:#F5F1E8;
+}
+@media(max-width:640px){
+  .middle-section{
+    min-width:0;
+    flex: 1;
+  }
 }
