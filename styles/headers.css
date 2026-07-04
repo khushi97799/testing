@@ -1,0 +1,32 @@
+.left-section{
+  display: flex;
+  align-items: center;
+  width:20vw;
+  height:50px;
+  padding-left: 25px;
+}
+.iitg-h-logo{
+  width:35px;
+  object-fit: cover;
+  margin-right:9px;
+}
+.disang-h-logo{
+  width:40px;
+  object-fit: cover;
+  margin-right:9px;
+}
+.iitg-h-logo-img{
+  width:35px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.disang-h-logo-img{
+  width:40px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.title1{
+  font-size:20px;
+  font-family: Inter;
+  font-weight: 700;
+}

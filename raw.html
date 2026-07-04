@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Home Page
+    </title>
+    <link href="https://fonts.cdnfonts.com/css/andrew-elegant" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">     
+    <style>
+      body{
+        overflow-x:hidden;
+        background-color: #f5f1e8;
+      }
+      p{
+        margin:0;
+        padding:0;
+      }
+      .tab1-home{
+        min-height:100vh;
+        position:relative;
+      }
+      .tab2-home{
+        min-height: 100vh;
+        position: relative;
+        top:300px;
+      }
+      .tab3-home{
+        min-height: 100vh;
+        position: relative;
+        top:300px;
+      }
+      .tab4-home{
+        min-height: 100vh;
+        position: relative;
+        top:300px;
+      }
+      .bg{
+        width:100%;
+        object-fit:cover;
+        filter:brightness(35%);
+        margin:0;
+        padding:0;
+        margin-top:70px;
+        position:absolute;
+        left:0;
+      }
+      .bg-title{
+       font-family:andrew elegant;
+       font-size:55px;
+       position:relative;
+       color:#f5f1e8;
+       width:100%;
+       top:386px;
+       text-align:center;
+       display:block;
+      }
+      .bg-title1{
+        font-family:Inter;
+        color:#ffffff;
+        font-size:20px;
+        font-style:solid;
+        font-weight:500;
+        position: relative;
+        top:393px;
+        text-align:center;
+        left:370px;
+        display:block;
+        max-width:50%;
+      }
+      .hostel-info{
+        position:relative;
+        background-color:#5a684e;
+        border:none;
+        border-radius:10px;
+        color:#f5f1e8;
+        font-size:22px;
+        font-style:solid;
+        margin-left:40px;
+        padding-top:45px;
+        padding-bottom:45px;
+        padding-left:15px;
+        padding-right:15px;
+        top:600px;
+        left:200px;
+        text-align:center;
+        font-family:Tahoma;
+        transition: all 0.15s;
+      }
+      .hostel-info:hover{
+        margin-top:-10px;
+        margin-bottom:10px;
+        box-shadow:20px 20px 20px rgba(0,0,0,0.25);
+        cursor:pointer;
+      }
+      .info-grid{
+        display:grid;
+        grid-template-columns: 250px 250px 250px 250px;
+      }
+      .facilities-grid{
+        display:grid;
+        grid-template-columns:24% 24% 24% 24% 24%;
+        position:relative;
+      }
+      .facilities-title{
+        font-family:andrew elegant;
+       font-size:55px;
+       color:#5a684e;
+       text-align:center;
+       display:block;
+       margin-bottom:140px;
+      }
+      .notice_board-title{
+        font-family:andrew elegant;
+       font-size:55px;
+       color:#5a684e;
+       text-align:center;
+       display:block;
+       margin-bottom:140px;
+       margin-top:200px;
+       margin-left:180px;
+       max-width:75%;
+       text-align: center;
+      }
+      .music_button,
+      .library_button,
+      .mess_button,
+      .canteen_button,
+      .tv_button{
+        background-color:black;
+        height:390px;
+        width:300px;
+        border-radius:150px;
+        margin-left:-120px;
+        margin-right:70px;
+        border:none;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        box-shadow:20px 20px 20px rgba(0, 0, 0, 0.15);
+        transition:all 0.15s;
+      }
+      
+      .library_button:hover,
+      .canteen_button:hover{
+        cursor:pointer;
+        margin-top:10px;
+      }
+      .mess_button:hover{
+        cursor:pointer;
+        margin-top:-10px;
+      }
+      .music_button:hover,
+      .tv_button:hover{
+        cursor:pointer;
+        margin-top:80px;
+      }
+      .tv_button{
+        transform:rotate(10deg);
+        margin-top:90px;
+      }
+      .music_button{
+        transform:rotate(-10deg);
+        margin-top:90px;
+      }
+      .library_button{
+        transform:rotate(-5deg);
+        margin-top:20px;
+      }
+      .canteen_button{
+        transform:rotate(5deg);
+        margin-top:20px;
+      }
+      .music_img,
+      .library_img,
+      .tv_img,
+      .canteen_img,
+      .mess_img{
+        width:300px;
+        height:390px;
+        border-radius:150px;
+        object-fit:cover;
+        margin:0;
+        padding:0;
+      }
+      .view-facilities{
+        position:absolute;
+        font-family:Tahoma;
+        margin-top:36px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#B39A78;
+        color:white;
+        font-size:32px;
+        padding-top:23px;
+        padding-bottom:23px;
+        padding-left:65px;
+        padding-right:120px;
+        border:none;
+        margin-left:33%;
+        border-radius:50px;
+        cursor:pointer;
+        line-height:100%;
+        box-shadow:20px 20px 20px rgba(0,0,0,0.15);
+        transform: all 0.25s;
+      }
+       .view-facilities:hover{
+        box-shadow: 25px 25px 25px rgba(0,0,0,0.15);
+        padding-top:25px;
+        padding-bottom:25px;
+        padding-left:68px;
+        .arrow{
+          padding:12px;
+        }
+        }
+      .arrow{
+        display:flex;
+         margin-left:60%;
+         background-color:#5A684E;
+         border:none;
+         border-radius:105px;
+         padding-left:10px;
+         padding-right:10px;
+         padding-top:10px;
+         padding-bottom:10px;
+         z-index:40;
+         position:relative;
+         top:43px;
+         left:10px;
+         cursor:pointer;
+      }
+      .arrow_img{
+        height:45px;
+        z-index:20;
+      }
+      .notice{
+        position:relative;
+        left:130px;
+        right:40px;
+        padding:20px;
+        height:400px;
+        max-width:1300px;
+        border-radius:30px;
+        background-color:white;
+        box-shadow:20px 20px 20px rgba(0,0,0,0.20);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab1-home">
+      <div>
+        <img class="bg" src="background/background.jpg">
+        <img class="bg" src="background/background1.jpg">
+        <img class="bg" src="background/background2.jpg">
+        <img class="bg" src="background/background3.jpg">
+        <img class="bg" src="background/background4.jpg">
+        <img class="bg" src="background/background5.jpg">
+      </div>
+      <p class="bg-title">
+        DISANG HOSTEL IIT GUWAHATI
+      </p>
+      <p class="bg-title1">
+        A HOME AWAY FROM HOME, FOSTERING COMMUNITY, GROWTH, AND EXCELLENCE
+      </p>
+      <div class="info-grid">
+        <button class="hostel-info">
+          INAUGURATED ON JULY 24, 2019
+        </button>
+        <button class="hostel-info">
+          TWO WINGS WING A & WING C
+        </button>
+        <button class="hostel-info">
+           1100 ROOMS
+        </button>
+        <button class="hostel-info">
+          900 BOARDERS
+        </button>
+      </div>
+    </div>
+    <div class="tab2-home">
+     <div> <p class="facilities-title">
+        FACILITIES
+      </p>
+    </div>
+    <div class="facilities-grid">
+    <button class="music_button">
+      <img class="music_img" src="facilities/Music_room.png">
+    </button>
+    <button class="library_button">
+      <img class="library_img" src="facilities/Library.png">
+    </button>
+    <button class="mess_button">
+      <img class="mess_img" src="facilities/mess.png">
+    </button>
+    <button class="canteen_button">
+      <img class="canteen_img" src="facilities/Canteen.png">
+    </button>
+    <button class="tv_button">
+      <img class="tv_img" src="facilities/TV_room.png">
+    </button>
+    </div>
+    <div class="facilities-button">
+      <button class="view-facilities">
+        VIEW ALL FACILITIES
+        <button class="arrow">
+          <img class="arrow_img" src="icons/arrow.png">
+        </button>
+      </button>
+    </div>
+    </div>
+    <div class="tab3-home">
+      <div> <p class="notice_board-title">
+        NOTICE BOARD & ANNOUNCEMENTS
+      </p>
+    </div>
+    <div>
+      <p class="notice">
+
+      </p>
+    </div>
+    </div>
+    <div class="tab4-home">
+
+    </div>
+    <script>
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+    var i;
+    var x = document.getElementsByClassName("bg");
+    for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 3000); // Change image every 3 seconds
+    }
+    </script>
+  </body>
+</html>

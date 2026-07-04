@@ -1,0 +1,12 @@
+.map-frame {
+  position: relative;
+  width: 100vw;       
+  height: 30vh;      
+  border: none;
+  display: block;
+
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
